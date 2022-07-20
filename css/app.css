@@ -330,9 +330,9 @@ body {
     position: relative;
     z-index: 1;
 
-    background: url(./images/assets/bg-build-center.jpg) repeat-x,
-                url(./images/assets/bg-build-left.jpg) left top repeat-y,
-                url(./images/assets/bg-build-right.jpg) right top repeat-y;
+    background: url(../images/assets/bg-build-center.jpg) repeat-x,
+                url(../images/assets/bg-build-left.jpg) left top repeat-y,
+                url(../images/assets/bg-build-right.jpg) right top repeat-y;
 
     background-color: #f4cc94;
 
@@ -348,7 +348,7 @@ body {
     position: absolute;
     left: 0px;
     top: -3px;
-    background: url(./images/assets/buttons.png) 0px -493px;
+    background: url(../images/assets/buttons.png) 0px -493px;
 }
 
 .container-top-right {
@@ -357,11 +357,11 @@ body {
     position: absolute;
     right: -1px;
     top: -5px;
-    background: url(./images/assets/buttons.png) -134px -493px;
+    background: url(../images/assets/buttons.png) -134px -493px;
 }
 
 .container-items .arrow-left {
-    background: url(./images/assets/arrows.png) no-repeat left top;
+    background: url(../images/assets/arrows.png) no-repeat left top;
     position: absolute;    
     top: 50%;
     left: 10px;
@@ -374,7 +374,7 @@ body {
 }
 
 .container-items .arrow-right {
-    background: url(./images/assets/arrows.png) no-repeat left bottom;
+    background: url(../images/assets/arrows.png) no-repeat left bottom;
     position: absolute;
     top: 50%;
     right: 10px;
@@ -419,7 +419,7 @@ body {
     position: absolute;
     right: -15px;
     top: 5px;
-    background: url(./images/assets/buttons.png);
+    background: url(../images/assets/buttons.png);
     background-position: 0px -366px;
     z-index: 1;
 }
@@ -454,7 +454,7 @@ body {
     position: absolute;
     top: 3px;
     left: 3px;
-    background: url(./images/assets/buttons.png);
+    background: url(../images/assets/buttons.png);
     background-position: -52px -412px;
 }
 
@@ -471,7 +471,7 @@ body {
     position: absolute;
     top: 3px;
     right: 0px;
-    background: url(./images/assets/buttons.png);
+    background: url(../images/assets/buttons.png);
     background-position: -56px -438px;
 }
 
@@ -498,7 +498,7 @@ body {
     position: absolute;
     top: 3px;
     left: 3px;
-    background: url(./images/assets/buttons.png);
+    background: url(../images/assets/buttons.png);
     background-position: 0px -412px;
 }
 
@@ -514,7 +514,7 @@ body {
     position: absolute;
     top: 3px;
     right: 0px;
-    background: url(./images/assets/buttons.png);
+    background: url(../images/assets/buttons.png);
     background-position: 0px -438px;
 }
 
@@ -530,7 +530,7 @@ body {
     position: absolute;
     top: 3px;
     left: 3px;
-    background: url(./images/assets/buttons.png);
+    background: url(../images/assets/buttons.png);
     background-position: 0px -718px;
 }
 
@@ -546,7 +546,7 @@ body {
     position: absolute;
     top: 3px;
     right: 0px;
-    background: url(./images/assets/buttons.png);
+    background: url(../images/assets/buttons.png);
     background-position: 0px -466px;
 }
 
@@ -587,7 +587,7 @@ body {
 
 /*botao construcao rua*/
 .builder li.terrain {
-    background: url(./images/assets/buttons.png);
+    background: url(../images/assets/buttons.png);
     width: 83px;
     height: 92px;
     background-position: 0px -116px;
@@ -613,7 +613,7 @@ body {
 
 /*botao construcao planta*/
 .builder li.tree {
-    background: url(./images/assets/buttons.png);
+    background: url(../images/assets/buttons.png);
     width: 71px;
     height: 72px;
     background-position: 0px -208px;
@@ -639,7 +639,7 @@ body {
 
 /*botao construcao residencial*/
 .builder li.residencial {
-    background: url(./images/assets/buttons.png);
+    background: url(../images/assets/buttons.png);
     width: 96px;
     height: 86px;
     background-position: 0px -280px;
@@ -687,7 +687,7 @@ body {
 }
 
 .moneyBag li .bgLotus {
-    background: url(./images/assets/buttons.png);
+    background: url(../images/assets/buttons.png);
     width: 56px;
     height: 58px;
     background-position: 0px -58px;
@@ -753,7 +753,7 @@ body {
 }
 
 .moneyBag li .bgDrop {
-    background: url(./images/assets/buttons.png);
+    background: url(../images/assets/buttons.png);
     width: 42px;
     height: 58px;
     background-position: 0px 0px;
