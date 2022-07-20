@@ -124,7 +124,7 @@ body {
 #intro .hero {
     width: 120px;
     height: 236px;
-    background: url(./images/assets/hero.png);
+    background: url(../images/assets/hero.png);
     position: absolute;
     bottom: 0px;
     left: -140px;
@@ -176,7 +176,7 @@ body {
 #overlay .hero {
     width: 120px;
     height: 236px;
-    background: url(./images/assets/hero.png);
+    background: url(../images/assets/hero.png);
     position: absolute;
     top: -110px;
     left: 28px;
