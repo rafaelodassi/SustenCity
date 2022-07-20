@@ -1,0 +1,957 @@
+/*gerais*/
+body {
+    margin: 0;
+}
+
+/*tela loading e form de login*/
+#loading {
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+	z-index: 5;
+	background: #2fcc71;
+    text-align: center;
+}
+
+#loading label.loading {
+    font-size: 20px;
+    font-family: 'Calibri';
+    color: #fff;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+/*tela de help com personagem e balao*/
+#intro {
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 4;
+    background: rgba(0, 0, 0, .5);
+    text-align: center;
+}
+
+#intro .bubble {    
+    width: 600px;
+    height: 300px;
+    position: absolute;
+    background: #fff;
+    border: #bbb solid 0;
+    padding: 15px;
+
+    font-family: 'Arial';
+    font-size: 17px;
+    font-weight: bold;
+    color: #77350f;
+    text-align: center;
+
+    left: 50%;
+    top: 50%;
+    margin-left: -255px;
+    margin-top: -165px;
+
+    -webkit-border-radius: 7px;
+    border-radius: 7px;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.5) 3px 3px 10px 0px;
+    box-shadow: rgba(0, 0, 0, 0.5) 3px 3px 10px 0px;
+}
+
+#intro .bubble .pointer {
+    content: '';
+    position: absolute;
+
+    border-style: solid;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent #fff;
+    display: block;
+
+    left: -10px;
+    top: 50%;
+
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.container-bubble-info {
+    width: 100%;
+    height: 83%;
+    overflow: auto;
+}
+
+.container-bubble-info img {
+    max-width: 100%;
+}
+
+#intro .bubble button:focus {
+    outline: 0;
+}
+
+#intro .bubble button:active {
+    border-bottom: none;
+}
+
+#intro .bubble button:hover {
+    background: #0FA54E;
+    cursor: pointer;
+}
+
+#intro .bubble button {
+    width: 100%;
+    height: 35px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    border: none;
+    padding: 0 10px 0 10px;
+    color: #fff;
+    font-size: 16px;
+    font-family: 'Calibri';
+    font-weight: bold;
+    text-transform: uppercase;
+    background: #2fcc71;
+    border-bottom: 3px solid #808b8d;
+    letter-spacing: 1px;
+    margin-top: 20px;
+}
+
+#intro .hero {
+    width: 120px;
+    height: 236px;
+    background: url(../images/assets/hero.png);
+    position: absolute;
+    bottom: 0px;
+    left: -140px;
+}
+
+/*containers body*/
+#overlay {
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+	
+	-moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    cursor: default;
+}
+
+#canvas {
+    background: #000;
+    position: absolute;
+    z-index: 1;
+
+    cursor: grab;
+    cursor: -moz-grab;
+    cursor: -webkit-grab;
+}
+
+#canvas:active {
+    cursor: grabbing;
+    cursor: -moz-grabbing;
+    cursor: -webkit-grabbing;
+}
+
+.buildHighlight {
+    cursor: grab;
+    cursor: -moz-grab;
+    cursor: -webkit-grab;
+}
+
+.buildHighlight:active {
+    cursor: grabbing;
+    cursor: -moz-grabbing;
+    cursor: -webkit-grabbing;
+}
+
+/*personagem*/
+#overlay .hero {
+    width: 120px;
+    height: 236px;
+    background: url(../images/assets/hero.png);
+    position: absolute;
+    top: -110px;
+    left: 28px;
+    z-index: 1;
+
+    -webkit-transform: translateY(110px);
+    transform: translateY(110px);
+
+    -webkit-transition: -webkit-transform 700ms;
+    transition: transform 700ms;
+
+    will-change: transform;
+}
+
+#overlay .hero.move {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+}
+
+#overlay .hero.msg {
+    -webkit-transform: translateY(-40px);
+    transform: translateY(-40px);
+}
+
+/*balao hero*/
+#overlay .bubble {
+    max-width: 60%;
+    z-index: 1;
+    position: absolute;
+    top: -50px;
+    left: 165px;
+    background: #fff;
+    border: #bbb solid 0;
+    padding: 10px 15px;
+
+    font-family: 'Arial';
+    font-size: 14px;
+    font-weight: bold;
+    color: #77350f;
+    text-align: center;
+
+    -webkit-border-radius: 7px;
+    border-radius: 7px;
+
+    -webkit-box-shadow: rgba(0, 0, 0, 0.5) 3px 3px 10px 0px;
+    box-shadow: rgba(0, 0, 0, 0.5) 3px 3px 10px 0px;
+
+    -webkit-transform: translateY(150%);
+    transform: translateY(150%);
+
+    -webkit-transition-duration: 700ms;
+    transition-duration: 700ms;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+}
+
+#overlay .bubble.move {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+}
+
+#overlay .bubble.msg {
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+}
+
+#overlay .bubble .pointer {
+    content: '';
+    position: absolute;
+
+    border-style: solid;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent #fff;
+    display: block;
+
+    left: -10px;
+    top: 50%;
+    margin-top: -10px;
+}
+
+#overlay .bubble label {
+    display: block;
+}
+
+/*botao do balao de mensagens*/
+#overlay .bubble button:focus {
+    outline: 0;
+}
+
+#overlay .bubble button:active {
+    border-bottom: none;
+}
+
+#overlay .bubble button:hover {
+    background: rgb(187, 0, 0);
+    cursor: pointer;
+}
+
+#overlay .bubble button {
+    height: 35px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    border: none;
+    padding: 0 10px 0 10px;
+    color: #fff;
+    font-size: 16px;
+    font-family: 'Calibri';
+    font-weight: bold;
+    text-transform: uppercase;
+    background: red;
+    border-bottom: 3px solid #808b8d;
+    letter-spacing: 1px;
+    margin-top: 10px;
+}
+
+#overlay .bubble button.saber-mais:hover {
+    background: #0FA54E;
+    cursor: pointer;
+}
+
+#overlay .bubble button.saber-mais {
+    background: #2fcc71;
+    margin-right: 10px;
+}
+
+.builderItems {
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    margin-left: -360px;
+    z-index: 1;
+
+    -webkit-transform: translateY(105%);
+    transform: translateY(105%);
+
+    -webkit-transition: -webkit-transform 300ms;
+    transition: transform 300ms;
+
+    will-change: transform;
+}
+
+.builderItems.move {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+}
+
+/*slider items*/
+.container-items {
+    width: 640px;
+    padding: 15px 40px;        
+    position: relative;
+    z-index: 1;
+
+    background: url(../images/assets/bg-build-center.jpg) repeat-x,
+                url(../images/assets/bg-build-left.jpg) left top repeat-y,
+                url(../images/assets/bg-build-right.jpg) right top repeat-y;
+
+    background-color: #f4cc94;
+
+    -webkit-border-top-left-radius: 18%;
+    border-top-left-radius: 18%;
+    -webkit-border-top-left-radius: 18%;
+    border-top-right-radius: 18%;
+}
+
+.container-top-left {
+    width: 134px;
+    height: 58px;
+    position: absolute;
+    left: 0px;
+    top: -3px;
+    background: url(../images/assets/buttons.png) 0px -493px;
+}
+
+.container-top-right {
+    width: 128px;
+    height: 44px;
+    position: absolute;
+    right: -1px;
+    top: -5px;
+    background: url(../images/assets/buttons.png) -134px -493px;
+}
+
+.container-items .arrow-left {
+    background: url(../images/assets/arrows.png) no-repeat left top;
+    position: absolute;    
+    top: 50%;
+    left: 10px;
+    width: 23px;
+    height: 36px;
+}
+
+.container-items .arrow-left:hover {
+    cursor: pointer;
+}
+
+.container-items .arrow-right {
+    background: url(../images/assets/arrows.png) no-repeat left bottom;
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    width: 23px;
+    height: 36px;
+}
+
+.container-items .arrow-right:hover {
+    cursor: pointer;
+}
+
+.container-items .swiper-container {
+    width: 640px;
+    height: 100%;
+}
+
+.container-items .swiper-wrapper {
+    height: 100px;
+}
+
+.container-items .swiper-slide {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.container-items .swiper-slide:hover {
+    -webkit-animation-name: hvr-buzz-out;
+    animation-name: hvr-buzz-out;
+    -webkit-animation-duration: 0.75s;
+    animation-duration: 0.75s;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+
+    cursor: pointer;
+}
+
+.builderItems .close {
+    width: 46px;
+    height: 46px;
+    position: absolute;
+    right: -15px;
+    top: 5px;
+    background: url(../images/assets/buttons.png);
+    background-position: 0px -366px;
+    z-index: 1;
+}
+
+.builderItems .close:hover {
+    background-position: -46px -366px;
+    cursor: pointer;
+}
+
+/*container item - obj, highlight e buttons*/
+.buildHighlight, .buildButtons {
+    position: absolute;
+    z-index: 1;
+    opacity: 0;
+}
+
+/*buttons rua*/
+.buttonsRua {
+    width: 57px;
+    height: 29px;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    -webkit-border-radius: 20px;
+    border-radius: 20px;    
+}
+
+/*button add*/
+.buttonsRua .add {
+    width: 26px;
+    height: 26px;
+    background: #fff;
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    background: url(../images/assets/buttons.png);
+    background-position: -52px -412px;
+}
+
+.buttonsRua .add:hover {
+    cursor: pointer;
+    background-position: -78px -412px;
+}
+
+/*button rotate*/
+.buttonsRua .rotate {
+    width: 26px;
+    height: 26px;
+    background: #fff;
+    position: absolute;
+    top: 3px;
+    right: 0px;
+    background: url(../images/assets/buttons.png);
+    background-position: -56px -438px;
+}
+
+.buttonsRua .rotate:hover {
+    cursor: pointer;
+    background-position: -82px -438px;
+}
+
+/*buttons gerais*/
+.buttonsGeral {
+    width: 57px;
+    height: 29px;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    -webkit-border-radius: 20px;
+    border-radius: 20px;    
+}
+
+/*button aceitar*/
+.buttonsGeral .accept {
+    width: 26px;
+    height: 26px;
+    background: #fff;
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    background: url(../images/assets/buttons.png);
+    background-position: 0px -412px;
+}
+
+.buttonsGeral .accept:hover {
+    cursor: pointer;
+    background-position: -26px -412px;
+}
+
+/*button cancelar*/
+.buttonsGeral .cancel {
+    width: 28px;
+    height: 28px;
+    position: absolute;
+    top: 3px;
+    right: 0px;
+    background: url(../images/assets/buttons.png);
+    background-position: 0px -438px;
+}
+
+.buttonsGeral .cancel:hover {
+    cursor: pointer;
+    background-position: -28px -438px;
+}
+
+/*button cancelar poor*/
+.buttonsGeral .cancelPoor {
+    width: 28px;
+    height: 28px;
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    background: url(../images/assets/buttons.png);
+    background-position: 0px -718px;
+}
+
+.buttonsGeral .cancelPoor:hover {
+    cursor: pointer;
+    background-position: -28px -718px;
+}
+
+/*button sell*/
+.buttonsGeral .sell {
+    width: 54px;
+    height: 27px;
+    position: absolute;
+    top: 3px;
+    right: 0px;
+    background: url(../images/assets/buttons.png);
+    background-position: 0px -466px;
+}
+
+.buttonsGeral .sell:hover {
+    cursor: pointer;
+    background-position: -54px -466px;
+}
+
+/*container construcao menu*/
+.builder {
+    position: absolute;
+    z-index: 3;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    bottom: 15px;
+    right: 20px;
+
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+
+    -webkit-transition: -webkit-transform 300ms;
+    transition: transform 300ms;
+
+    will-change: transform;
+}
+
+.builder.move {
+    -webkit-transform: translateX(125%);
+    transform: translateX(125%);
+}
+
+.builder li {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+
+/*botao construcao rua*/
+.builder li.terrain {
+    background: url(../images/assets/buttons.png);
+    width: 83px;
+    height: 92px;
+    background-position: 0px -116px;
+	top: -22px;
+
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+}
+
+.builder li.terrain:hover {
+    cursor: pointer;
+    -webkit-transform: scale(0.8);
+    transform: scale(0.8);
+    -webkit-transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+    transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+}
+
+/*botao construcao planta*/
+.builder li.tree {
+    background: url(../images/assets/buttons.png);
+    width: 71px;
+    height: 72px;
+    background-position: 0px -208px;
+	top: -7px;
+
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+}
+
+.builder li.tree:hover {
+    cursor: pointer;
+    -webkit-transform: scale(0.8);
+    transform: scale(0.8);
+    -webkit-transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+    transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+}
+
+/*botao construcao residencial*/
+.builder li.residencial {
+    background: url(../images/assets/buttons.png);
+    width: 96px;
+    height: 86px;
+    background-position: 0px -280px;
+
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+}
+
+.builder li.residencial:hover {
+    cursor: pointer;
+    -webkit-transform: scale(0.8);
+    transform: scale(0.8);
+    -webkit-transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+    transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+}
+
+/*container moneyBag*/
+.moneyBag {
+    position: absolute;
+    z-index: 3;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    top: 25px;
+    right: 30px;
+}
+
+.moneyBag li {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+
+/*barra quantidade de lotus*/
+.moneyBag li.lotus {
+    width: 56px;
+    height: 58px;
+    margin-top: 5px;
+}
+
+.moneyBag li .bgLotus {
+    background: url(../images/assets/buttons.png);
+    width: 56px;
+    height: 58px;
+    background-position: 0px -58px;
+    position: relative;
+    z-index: 2;
+}
+
+.moneyBag li .valueLotus {
+    width: 103px;
+    height: 31px;
+    background: rgba(0, 0, 0, 0.7);
+    position: relative;
+    z-index: 1;
+    top: -45px;
+    left: -81px;
+    -webkit-border-bottom-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    -webkit-border-top-left-radius: 20px;
+    border-top-left-radius: 20px;
+    color: #fff;
+    font-family: Arial;
+    line-height: 31px;
+    font-weight: bold;
+    padding-left: 10px;
+}
+
+.moneyBag li .valueLotus .count {
+    display: inline-block;
+
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.moneyBag li .valueLotus .count.addLotus {
+    -webkit-animation-name: hvr-pop;
+    animation-name: hvr-pop;
+    -webkit-animation-duration: 0.3s;
+    animation-duration: 0.3s;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+}
+
+.moneyBag li .valueLotus .count.removeLotus {
+    -webkit-animation-name: hvr-push;
+    animation-name: hvr-push;
+    -webkit-animation-duration: 0.3s;
+    animation-duration: 0.3s;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+}
+
+/*barra quantidade de gotas*/
+.moneyBag li.drop {
+    width: 42px;
+    height: 58px;
+}
+
+.moneyBag li .bgDrop {
+    background: url(../images/assets/buttons.png);
+    width: 42px;
+    height: 58px;
+    background-position: 0px 0px;
+    position: relative;
+    z-index: 2;
+}
+
+.moneyBag li .valueDrop {
+    width: 103px;
+    height: 31px;
+    background: rgba(0, 0, 0, 0.7);
+    position: relative;
+    z-index: 1;
+    top: -45px;
+    left: -88px;
+    -webkit-border-bottom-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    -webkit-border-top-left-radius: 20px;
+    border-top-left-radius: 20px;
+    color: #fff;
+    font-family: Arial;
+    line-height: 31px;
+    font-weight: bold;
+    padding-left: 10px;
+}
+
+.moneyBag li .valueDrop .count {
+    display: inline-block;
+
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.moneyBag li .valueDrop .count.addDrops {
+    -webkit-animation-name: hvr-pop;
+    animation-name: hvr-pop;
+    -webkit-animation-duration: 0.3s;
+    animation-duration: 0.3s;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+}
+
+.moneyBag li .valueDrop .count.removeDrops {
+    -webkit-animation-name: hvr-push;
+    animation-name: hvr-push;
+    -webkit-animation-duration: 0.3s;
+    animation-duration: 0.3s;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+}
+
+/*animations*/
+@-webkit-keyframes hvr-buzz-out {
+    10% {
+        -webkit-transform: translateX(3px) rotate(2deg);
+        transform: translateX(3px) rotate(2deg);
+    }
+
+    20% {
+        -webkit-transform: translateX(-3px) rotate(-2deg);
+        transform: translateX(-3px) rotate(-2deg);
+    }
+
+    30% {
+        -webkit-transform: translateX(3px) rotate(2deg);
+        transform: translateX(3px) rotate(2deg);
+    }
+
+    40% {
+        -webkit-transform: translateX(-3px) rotate(-2deg);
+        transform: translateX(-3px) rotate(-2deg);
+    }
+
+    50% {
+        -webkit-transform: translateX(2px) rotate(1deg);
+        transform: translateX(2px) rotate(1deg);
+    }
+
+    60% {
+        -webkit-transform: translateX(-2px) rotate(-1deg);
+        transform: translateX(-2px) rotate(-1deg);
+    }
+
+    70% {
+        -webkit-transform: translateX(2px) rotate(1deg);
+        transform: translateX(2px) rotate(1deg);
+    }
+
+    80% {
+        -webkit-transform: translateX(-2px) rotate(-1deg);
+        transform: translateX(-2px) rotate(-1deg);
+    }
+
+    90% {
+        -webkit-transform: translateX(1px) rotate(0);
+        transform: translateX(1px) rotate(0);
+    }
+
+    100% {
+        -webkit-transform: translateX(-1px) rotate(0);
+        transform: translateX(-1px) rotate(0);
+    }
+}
+
+@keyframes hvr-buzz-out {
+    10% {
+        -webkit-transform: translateX(3px) rotate(2deg);
+        transform: translateX(3px) rotate(2deg);
+    }
+
+    20% {
+        -webkit-transform: translateX(-3px) rotate(-2deg);
+        transform: translateX(-3px) rotate(-2deg);
+    }
+
+    30% {
+        -webkit-transform: translateX(3px) rotate(2deg);
+        transform: translateX(3px) rotate(2deg);
+    }
+
+    40% {
+        -webkit-transform: translateX(-3px) rotate(-2deg);
+        transform: translateX(-3px) rotate(-2deg);
+    }
+
+    50% {
+        -webkit-transform: translateX(2px) rotate(1deg);
+        transform: translateX(2px) rotate(1deg);
+    }
+
+    60% {
+        -webkit-transform: translateX(-2px) rotate(-1deg);
+        transform: translateX(-2px) rotate(-1deg);
+    }
+
+    70% {
+        -webkit-transform: translateX(2px) rotate(1deg);
+        transform: translateX(2px) rotate(1deg);
+    }
+
+    80% {
+        -webkit-transform: translateX(-2px) rotate(-1deg);
+        transform: translateX(-2px) rotate(-1deg);
+    }
+
+    90% {
+        -webkit-transform: translateX(1px) rotate(0);
+        transform: translateX(1px) rotate(0);
+    }
+
+    100% {
+        -webkit-transform: translateX(-1px) rotate(0);
+        transform: translateX(-1px) rotate(0);
+    }
+}
+
+@-webkit-keyframes hvr-pop {
+    50% {
+        -webkit-transform: scale(1.4);
+        transform: scale(1.4);
+    }
+}
+
+@keyframes hvr-pop {
+    50% {
+        -webkit-transform: scale(1.4);
+        transform: scale(1.4);
+    }
+}
+
+@-webkit-keyframes hvr-push {
+    50% {
+        -webkit-transform: scale(0.6);
+        transform: scale(0.6);
+    }
+
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+@keyframes hvr-push {
+    50% {
+        -webkit-transform: scale(0.6);
+        transform: scale(0.6);
+    }
+
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+

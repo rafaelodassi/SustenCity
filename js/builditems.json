@@ -1,0 +1,258 @@
+{
+	"terrain":
+	{
+		"rua":
+		{
+			"dragMode": {
+				"label": "Rua",
+				"bgWidth": 92,
+				"bgHeight": 50,
+				"bgImg": "../images/assets/terrain.png",
+				"bgPositionX": 0,
+				"bgPositionY": 0				
+			},
+			
+			"tileMode": {
+				"tileWidth": 64,
+				"tileHeight": 32,
+				"tilePositionX": 0,
+				"tilePositionY": 0,
+				"tileImg": "tilesTerrain",
+				"sx": 0,
+				"sy": 0,
+				"tilesX": 1,
+				"tilesY": 1
+			},
+
+			"status" : {
+				"drops": 50
+			}														
+		}
+	},
+	
+	"tree":
+	{
+		"conifera":
+		{
+			"dragMode": {
+				"label": "Pinheiro",
+				"bgWidth": 79,
+				"bgHeight": 88,
+				"bgImg": "../images/assets/tree.png",
+				"bgPositionX": 0,
+				"bgPositionY": 0				
+			},
+			
+			"tileMode": {
+				"tileWidth": 64,
+				"tileHeight": 76,
+				"tilePositionX": 0,
+				"tilePositionY": 0,
+				"tileImg": "tilesTree",
+				"sx": 0,
+				"sy": 0,
+				"tilesX": 1,
+				"tilesY": 1
+			},
+
+			"status" : {
+				"drops": 100,
+                "rewardType": "lotus",
+                "rewardTime": 2,
+                "rewardValue": 1,
+                "smallBubble": "<label>Os Pinheiros não são usados somente para enfeitar o seu natal, aprenda mais sobre eles!</label><button class='saber-mais'>Aprender mais</button><button class='ja-sei'>Fechar</button><div class='pointer'></div>",
+                "largeBubble": "<p>Além de enfeitarem o seu natal, os pinheiros também produzem a resina que é responsável pela fabricação de uma simples goma de mascar (chiclete).</p><img src='../images/context/pinheiro_01.jpg'>"
+			}
+		},
+		
+		"arvore":
+		{
+			"dragMode": {
+				"label": "Árvore Frutífera",
+				"bgWidth": 123,
+				"bgHeight": 120,
+				"bgImg": "../images/assets/tree.png",
+				"bgPositionX": -79,
+				"bgPositionY": 0				
+			},
+			
+			"tileMode": {
+				"tileWidth": 89,
+				"tileHeight": 96,
+				"tilePositionX": 64,
+				"tilePositionY": 0,
+				"tileImg": "tilesTree",
+				"sx": 64,
+				"sy": 0,
+				"tilesX": 1,
+				"tilesY": 1
+			},
+
+			"status" : {
+				"drops": 200,
+                "rewardType": "lotus",
+                "rewardTime": 2,
+                "rewardValue": 1,
+                "smallBubble": "<label>As árvores frutíferas não dão somente frutos, veja mais sobre o que elas podem ajudar a sua cidade!</label><button class='saber-mais'>Ver mais</button><button class='ja-sei'>Fechar</button><div class='pointer'></div>",
+                "largeBubble": "<img src='../images/context/frutiferas_01.jpg'>"
+			}														
+		}
+	},
+	
+	"residencial":
+	{
+		"cabana":
+		{
+			"dragMode": {
+				"label": "Cabana",
+				"bgWidth": 105,
+				"bgHeight": 96,
+				"bgImg": "../images/assets/residencial.png",
+				"bgPositionX": 0,
+				"bgPositionY": 0				
+			},
+			
+			"tileMode": {
+				"tileWidth": 64,
+				"tileHeight": 56,
+				"tilePositionX": 0,
+				"tilePositionY": 0,
+				"tileImg": "tilesRes",
+				"sx": 0,
+				"sy": 0,
+				"tilesX": 1,
+				"tilesY": 1
+			},
+
+			"status" : {
+				"drops": 500,
+                "rewardType": "trash",
+                "rewardTime": 2,
+                "rewardValue": 10
+			}
+		},
+
+		"casa":
+		{
+			"dragMode": {
+				"label": "Casa",
+				"bgWidth": 108,
+				"bgHeight": 101,
+				"bgImg": "../images/assets/residencial.png",
+				"bgPositionX": -105,
+				"bgPositionY": 0				
+			},
+			
+			"tileMode": {
+				"tileWidth": 128,
+				"tileHeight": 94,
+				"tilePositionX": 64,
+				"tilePositionY": 0,
+				"tileImg": "tilesRes",
+				"sx": 64,
+				"sy": 0,
+				"tilesX": 2,
+				"tilesY": 2
+			},
+
+			"status" : {
+				"drops": 800,
+                "rewardType": "trash",
+                "rewardTime": 2,
+                "rewardValue": 30
+			}														
+		},
+		
+		"industry":
+		{
+			"dragMode": {
+				"label": "Indústria comun",
+				"bgWidth": 120,
+				"bgHeight": 131,
+				"bgImg": "../images/assets/residencial.png",
+				"bgPositionX": -213,
+				"bgPositionY": 0				
+			},
+			
+			"tileMode": {
+				"tileWidth": 192,
+				"tileHeight": 148,
+				"tilePositionX": 192,
+				"tilePositionY": 0,
+				"tileImg": "tilesRes",
+				"sx": 192,
+				"sy": 0,
+				"tilesX": 3,
+				"tilesY": 3
+			},
+
+			"status" : {
+				"drops": 1000,
+                "rewardType": "trash",
+				"rewardTime": 2,
+                "rewardValue": 50
+			}														
+		},
+		
+		"industryR":
+		{
+			"dragMode": {
+				"label": "Indústria de Reciclagem",
+				"bgWidth": 125,
+				"bgHeight": 131,
+				"bgImg": "../images/assets/residencial.png",
+				"bgPositionX": -333,
+				"bgPositionY": 0
+			},
+			
+			"tileMode": {
+				"tileWidth": 192,
+				"tileHeight": 148,
+				"tilePositionX": 384,
+				"tilePositionY": 0,
+				"tileImg": "tilesRes",
+				"sx": 384,
+				"sy": 0,
+				"tilesX": 3,
+				"tilesY": 3
+			},
+
+			"status" : {
+				"lotus": 5,
+                "rewardType": "lotus",
+                "rewardTime": 2,
+                "rewardValue": 5
+			}														
+		},
+
+		"aterro":
+		{
+			"dragMode": {
+				"label": "Aterro Sanitário",
+				"bgWidth": 200,
+				"bgHeight": 123,
+				"bgImg": "../images/assets/residencial.png",
+				"bgPositionX": -458,
+				"bgPositionY": 0
+			},
+			
+			"tileMode": {
+				"tileWidth": 192,
+				"tileHeight": 116,
+				"tilePositionX": 576,
+				"tilePositionY": 0,
+				"tileImg": "tilesRes",
+				"sx": 576,
+				"sy": 0,
+				"tilesX": 3,
+				"tilesY": 3
+			},
+
+			"status" : {
+				"drops": 3000,
+                "smallBubble": "<label>Você sabe para onde deve ir o seu lixo?</label><button class='saber-mais'>Aprender mais</button><button class='ja-sei'>Fechar</button><div class='pointer'></div>",
+                "largeBubble": "<p>Para onde deve ir o lixo da sua casa e da sua escola?</p>Ele deve ir para o aterro sanitário, que guarda o lixo de todo mundo, para que esse lixo não fique nas ruas, florestas ou rios. <p>Na sua cidade, existe um aterro sanitário? Veja abaixo como ele funciona:</p><img src='../images/context/aterro_sanitario_01.gif'>"
+			}														
+		}
+	}			
+}

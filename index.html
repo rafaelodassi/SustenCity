@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>        
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Seja bem-vindo à SustenCity</title>
+
+        <link href="../css/idangerous.swiper.css" rel="stylesheet">
+        <link href="../css/app.css" rel="stylesheet">
+		
+		<link rel="icon" href="../images/assets/favicon.png" />
+    </head>
+    <body>
+		<div id="loading"><label class="loading">Carregando - 0%</label></div>
+
+        <div id="intro">
+            <div class="bubble">
+                <div class="hero"></div>
+                <div class="pointer"></div>
+                <div class="container-bubble-info">
+                    <div class="scroll">
+                        <p>Seja bem-vindo à SustenCity!</p>
+                        <p>O meu nome é Green Woods, mas pode me chamar de Green. Eu sou o único da minha espécie que vive em SustenCity!</p>
+                        <p>Você pode me ajudar a tornar essa cidade a mais sustentável do mundo?</p>
+                        <p>Vamos lá! Inicie suas construções e divirte-se!</p>
+                    </div>
+                </div>
+                <button>Fechar e entrar em SustenCity</button>
+            </div>
+        </div>
+
+        <div id="overlay">
+            <canvas id="canvas"></canvas>
+
+            <div class="builderItems">
+                <div class="hero"></div>
+
+                <div class="bubble">
+                    Texto de exemplo
+                    <div class="pointer"></div>
+                </div>
+
+                <div class="container-items">
+                    <div class="container-top-left"></div>
+                    <div class="arrow-left"></div>
+
+                    <div class="container-top-right"></div>
+                    <div class="arrow-right"></div>
+
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper"></div>
+                    </div>
+                    <div class="close"></div>
+                </div>                                        
+            </div>
+
+            <ul class="builder">
+                <li class="terrain"></li>
+                <li class="tree"></li>
+                <li class="residencial"></li>
+            </ul>
+
+            <ul class="moneyBag">
+                <li class="drop">
+                    <div class="bgDrop"></div>
+                    <div class="valueDrop"><div class="count"></div></div>
+                </li>
+                <li class="lotus">
+                    <div class="bgLotus"></div>
+                    <div class="valueLotus"><div class="count"></div></div>
+                </li>
+            </ul>
+        </div>
+
+        <script src="../js/jquery-2.1.1.min.js"></script>
+        <script src="../js/idangerous.swiper.min.js"></script>
+        <script src="../js/gavia-0.0.0.js"></script>
+		<script src="../js/state.js"></script>
+        <script src="../js/build.js"></script>
+        <script src="../js/stats.min.js"></script>
+        <script src="../js/main.js"></script>
+    </body>
+</html>
