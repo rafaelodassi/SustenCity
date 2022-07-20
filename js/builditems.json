@@ -7,7 +7,7 @@
 				"label": "Rua",
 				"bgWidth": 92,
 				"bgHeight": 50,
-				"bgImg": "../images/assets/terrain.png",
+				"bgImg": "./images/assets/terrain.png",
 				"bgPositionX": 0,
 				"bgPositionY": 0				
 			},
@@ -38,7 +38,7 @@
 				"label": "Pinheiro",
 				"bgWidth": 79,
 				"bgHeight": 88,
-				"bgImg": "../images/assets/tree.png",
+				"bgImg": "./images/assets/tree.png",
 				"bgPositionX": 0,
 				"bgPositionY": 0				
 			},
@@ -61,7 +61,7 @@
                 "rewardTime": 2,
                 "rewardValue": 1,
                 "smallBubble": "<label>Os Pinheiros não são usados somente para enfeitar o seu natal, aprenda mais sobre eles!</label><button class='saber-mais'>Aprender mais</button><button class='ja-sei'>Fechar</button><div class='pointer'></div>",
-                "largeBubble": "<p>Além de enfeitarem o seu natal, os pinheiros também produzem a resina que é responsável pela fabricação de uma simples goma de mascar (chiclete).</p><img src='../images/context/pinheiro_01.jpg'>"
+                "largeBubble": "<p>Além de enfeitarem o seu natal, os pinheiros também produzem a resina que é responsável pela fabricação de uma simples goma de mascar (chiclete).</p><img src='./images/context/pinheiro_01.jpg'>"
 			}
 		},
 		
@@ -71,7 +71,7 @@
 				"label": "Árvore Frutífera",
 				"bgWidth": 123,
 				"bgHeight": 120,
-				"bgImg": "../images/assets/tree.png",
+				"bgImg": "./images/assets/tree.png",
 				"bgPositionX": -79,
 				"bgPositionY": 0				
 			},
@@ -94,7 +94,7 @@
                 "rewardTime": 2,
                 "rewardValue": 1,
                 "smallBubble": "<label>As árvores frutíferas não dão somente frutos, veja mais sobre o que elas podem ajudar a sua cidade!</label><button class='saber-mais'>Ver mais</button><button class='ja-sei'>Fechar</button><div class='pointer'></div>",
-                "largeBubble": "<img src='../images/context/frutiferas_01.jpg'>"
+                "largeBubble": "<img src='./images/context/frutiferas_01.jpg'>"
 			}														
 		}
 	},
@@ -107,7 +107,7 @@
 				"label": "Cabana",
 				"bgWidth": 105,
 				"bgHeight": 96,
-				"bgImg": "../images/assets/residencial.png",
+				"bgImg": "./images/assets/residencial.png",
 				"bgPositionX": 0,
 				"bgPositionY": 0				
 			},
@@ -138,7 +138,7 @@
 				"label": "Casa",
 				"bgWidth": 108,
 				"bgHeight": 101,
-				"bgImg": "../images/assets/residencial.png",
+				"bgImg": "./images/assets/residencial.png",
 				"bgPositionX": -105,
 				"bgPositionY": 0				
 			},
@@ -169,7 +169,7 @@
 				"label": "Indústria comun",
 				"bgWidth": 120,
 				"bgHeight": 131,
-				"bgImg": "../images/assets/residencial.png",
+				"bgImg": "./images/assets/residencial.png",
 				"bgPositionX": -213,
 				"bgPositionY": 0				
 			},
@@ -200,7 +200,7 @@
 				"label": "Indústria de Reciclagem",
 				"bgWidth": 125,
 				"bgHeight": 131,
-				"bgImg": "../images/assets/residencial.png",
+				"bgImg": "./images/assets/residencial.png",
 				"bgPositionX": -333,
 				"bgPositionY": 0
 			},
@@ -231,7 +231,7 @@
 				"label": "Aterro Sanitário",
 				"bgWidth": 200,
 				"bgHeight": 123,
-				"bgImg": "../images/assets/residencial.png",
+				"bgImg": "./images/assets/residencial.png",
 				"bgPositionX": -458,
 				"bgPositionY": 0
 			},
@@ -251,7 +251,7 @@
 			"status" : {
 				"drops": 3000,
                 "smallBubble": "<label>Você sabe para onde deve ir o seu lixo?</label><button class='saber-mais'>Aprender mais</button><button class='ja-sei'>Fechar</button><div class='pointer'></div>",
-                "largeBubble": "<p>Para onde deve ir o lixo da sua casa e da sua escola?</p>Ele deve ir para o aterro sanitário, que guarda o lixo de todo mundo, para que esse lixo não fique nas ruas, florestas ou rios. <p>Na sua cidade, existe um aterro sanitário? Veja abaixo como ele funciona:</p><img src='../images/context/aterro_sanitario_01.gif'>"
+                "largeBubble": "<p>Para onde deve ir o lixo da sua casa e da sua escola?</p>Ele deve ir para o aterro sanitário, que guarda o lixo de todo mundo, para que esse lixo não fique nas ruas, florestas ou rios. <p>Na sua cidade, existe um aterro sanitário? Veja abaixo como ele funciona:</p><img src='./images/context/aterro_sanitario_01.gif'>"
 			}														
 		}
 	}			

@@ -15,7 +15,7 @@
 			if (self.builderItemsUl.children().length > 0)
 				self.builderItemsUl.empty();
 			
-			$.getJSON( "../js/builditems.json", function( json ) {
+			$.getJSON( "./js/builditems.json", function( json ) {
 				_json = json[className];								
 
 				for (key in _json) {
@@ -189,7 +189,7 @@
 				highlightCss = {
 					'width': objWidth + "px",
 					'height': objHeight + "px",
-					'background': 'url(../images/tiles/' + currentItemObj.tileImg + '.png)',
+					'background': 'url(./images/tiles/' + currentItemObj.tileImg + '.png)',
 					'backgroundPosition': parseInt(-currentItemObj.tilePositionX) + "px " + parseInt(-(currentItemObj.tilePositionY + objHeight)) + "px",
 					'opacity': mode === 'edit' ? 1 : 0
 				};

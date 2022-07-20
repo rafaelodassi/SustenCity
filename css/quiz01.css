@@ -62,7 +62,7 @@ form label {
 .resps .sim {
 	width: 62px;
 	height: 115px;
-	background: url(../images/assets/sim.png) no-repeat top center;
+	background: url(./images/assets/sim.png) no-repeat top center;
 	display: inline-block;
 	margin-right: 50px;
 	line-height: 205px;
@@ -82,7 +82,7 @@ form label {
 .resps .nao {
 	width: 62px;
 	height: 115px;
-	background: url(../images/assets/nao.png) no-repeat top center;
+	background: url(./images/assets/nao.png) no-repeat top center;
 	display: inline-block;
 	line-height: 205px;
 

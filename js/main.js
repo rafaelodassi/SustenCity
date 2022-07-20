@@ -65,21 +65,21 @@ var tileMapRows = [
 ];
 
 var objImages = {
-    'bg': '../images/assets/map3.jpg',
-    1: '../images/tiles/tileImgGround.png',
-    'tilesRes': '../images/tiles/tilesRes.png',
-    'tilesTerrain': '../images/tiles/tilesTerrain.png',
-    'tilesTree': '../images/tiles/tilesTree.png',
-    'cloud1': '../images/assets/cloud1.png',
-    'cloud2': '../images/assets/cloud2.png',
-    'birds': '../images/assets/birds.png',
-    'residencial': '../images/assets/residencial.png',
-    'tree': '../images/assets/tree.png',
-    'terrain': '../images/assets/terrain.png',
-    'trashBubble': '../images/assets/trashBubble.png',
-    'trashReward': '../images/assets/trashReward.png',
-    'lotusBubble': '../images/assets/lotusBubble.png',
-    'lotusReward': '../images/assets/lotusReward.png'
+    'bg': './images/assets/map3.jpg',
+    1: './images/tiles/tileImgGround.png',
+    'tilesRes': './images/tiles/tilesRes.png',
+    'tilesTerrain': './images/tiles/tilesTerrain.png',
+    'tilesTree': './images/tiles/tilesTree.png',
+    'cloud1': './images/assets/cloud1.png',
+    'cloud2': './images/assets/cloud2.png',
+    'birds': './images/assets/birds.png',
+    'residencial': './images/assets/residencial.png',
+    'tree': './images/assets/tree.png',
+    'terrain': './images/assets/terrain.png',
+    'trashBubble': './images/assets/trashBubble.png',
+    'trashReward': './images/assets/trashReward.png',
+    'lotusBubble': './images/assets/lotusBubble.png',
+    'lotusReward': './images/assets/lotusReward.png'
 };
 
 var _imgLoaded;

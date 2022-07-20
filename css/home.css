@@ -66,19 +66,19 @@ a {
 }
 
 ul.menu li.game {
-	background: url(../images/assets/drop.png) no-repeat top center;
+	background: url(./images/assets/drop.png) no-repeat top center;
 }
 
 ul.menu li.cadastro {
-	background: url(../images/assets/packman.png) no-repeat top center;
+	background: url(./images/assets/packman.png) no-repeat top center;
 }
 
 ul.menu li.quiz01, ul.menu li.quiz02 {
-	background: url(../images/assets/bill.png) no-repeat top center;
+	background: url(./images/assets/bill.png) no-repeat top center;
 }
 
 ul.menu li.rel {
-	background: url(../images/assets/bookshelf.png) no-repeat top center;
+	background: url(./images/assets/bookshelf.png) no-repeat top center;
 }
 
 .menu li:hover {
